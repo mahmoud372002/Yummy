@@ -1,0 +1,230 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: var(--main-font);
+    background-color: black
+}
+:root{
+    --recipes-color:#CFF4FC;
+    --tags-color:#F8D7DA;
+    --source-color:#198754;
+    --main-font:"Assistant", sans-serif;
+    --ler-color:#cdc9cab5;
+    --font-detalis:"Merienda", cursive;
+}
+i{
+    cursor: pointer;
+}
+img{
+    cursor: pointer;
+    transition: .4s;
+    border-radius: 3%;
+
+}
+.item{
+    border-radius: 3%;
+}
+.ler{
+    height: 100%;
+    width: 100%;
+    background-color: var(--ler-color);
+    cursor: pointer;
+    transition: .4s;
+}
+a{
+    text-decoration: none;
+    color: white;
+    transition: .4s;
+}
+.item:hover .ler{
+    top: 0 !important;
+}
+.item:hover img{
+    transform: scale(1.1);     
+}
+.sideBar{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    left: -15% ;
+    /* left: 0; */
+    z-index: 2000;
+}
+.sideLink:hover{
+    transform: translateX(3%);
+    background-color: #ffd900;
+    border-radius: 3%;
+    color: black;
+    
+}
+.sideLink{
+    width: 70%;
+    padding-left: 3%;
+}
+.sideLogo{
+    width: 5%;
+    height: 100%;
+    z-index: 2000;
+    /* left: 15%; */
+    left: 0;
+    background-color: white;
+}
+/* --------------search page---------------- */
+.searchByName{
+    border-radius: 5%;
+    color: white;
+    border: 2px solid rgba(234, 169, 15, 0.797);
+    background-color: #2A2A2A !important;
+}
+.searchByName:focus{
+    border:1px solid none;
+    outline:0;
+    box-shadow: 0px 0 15px rgb(183, 156, 21);
+}
+.searchByLetter{
+    border-radius: 5%;
+    color: white;
+    border: 2px solid rgba(234, 169, 15, 0.797);
+    background-color: #2A2A2A !important;
+}
+.searchByLetter:focus{
+    border:1px solid none;
+    outline: 0;
+    box-shadow: 0px 0 15px rgb(183, 156, 21);
+}
+/* ----------categorie------------- */
+.categorieLer{
+    background-color: #eeecedc6;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.categorieItem:hover .categorieLer{
+    top: 0 !important;
+}
+/* -----------area------------- */
+.areaItem{
+    cursor: pointer;
+}
+/* ----------integredient-------------- */
+.ingredItem{
+    cursor: pointer;
+}
+/* ----------contact us---------------- */
+.centerMid{
+    transform: translateY(70%);
+}
+#contactInputName:focus,#contactInputEmail:focus,#contactInputNumber:focus,#contactInputAge:focus,#test:focus{
+    outline: none;
+    
+}
+/* ------------details---------- */
+.measureAndIngre{
+    background-color:#CFF4FC ;
+    color:black;
+    font-family: var(--font-detalis);
+    font-size: 10px !important;
+}
+/* --------loader----------- */
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, #ff3d00 100%);
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: relative;
+    margin-top: 20%;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #263238;
+  }
+  @keyframes rotation {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg)}
+  } 
+  /* .detalisImage{
+    background-image: url(../images/utxqpt1511639216.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:577px){
+    .sideBar{
+        width: 70%;
+    }
+    .sideLogo{
+        left: 55%;
+        padding-inline: 8%;
+        /* background-color: transparent; */
+    }
+    .sideImage{
+        background-color: #198754;
+    }
+    .nameAndEmail{
+        flex-direction: column;
+        padding: 0;
+        gap: 1% !important;
+    }
+    #contactInputName{
+        width: 100% !important;
+    }
+    #contactInputEmail{
+        width: 100% !important;
+    }
+    #contactInputNumber{
+        width: 100% !important;
+    }
+    #contactInputAge{
+        width: 100% !important;
+    }
+    #test{
+        width: 100% !important;
+    }
+    .contactUsInput{
+        margin-top: 0 !important;
+    }
+}
